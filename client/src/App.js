@@ -1,10 +1,10 @@
-import Home from "./pages/Home";
+import AllRoute from "./routes/AllRoute";
 
 
 function App() {
   return (
    <>
-   <Home/>
+   <AllRoute/>
    </>
   );
 }
