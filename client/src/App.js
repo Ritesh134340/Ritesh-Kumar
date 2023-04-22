@@ -1,10 +1,11 @@
+import Home from "./pages/Home";
 
 
 function App() {
   return (
-    <div>
-     Search Application
-    </div>
+   <>
+   <Home/>
+   </>
   );
 }
 
