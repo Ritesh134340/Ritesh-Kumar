@@ -7,14 +7,23 @@ Getting Started
 
 Installation
 
-Clone the repository: git clonehttps://github.com/Ritesh134340/Ritesh-Kumar.git
+Clone the repository: 
 
-Install dependencies: npm install or yarn install
+git clone https://github.com/Ritesh134340/Ritesh-Kumar.git
+
+Install dependencies:
+
+npm install or yarn install
 
 Create .env files in Client and Sever directory and add required fields.
 
-Start backend server : nodemon index.js
-Start frontent server : npm run 
+Start backend server : 
+
+nodemon index.js
+
+Start frontent server :
+
+npm run 
 
 
 ##Frontend Deployed Link :
