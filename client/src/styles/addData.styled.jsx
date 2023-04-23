@@ -26,6 +26,22 @@ export const AddDataWrapper=styled.div`
   color:${(props)=>props.selected==="company" ? "#576CBC" : "black"};
   
  }
+ .back-btn{
+    margin:auto;
+    border:2px solid red;
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:50px;
+    cursor:pointer;
+    border:1px solid gray;
+    font-weight:bold;
+    border-radius:5px;
+    background-color:red;
+    width:100px;
+    padding-top:5px;
+    padding-bottom:5px;
+    color:white;
+ }
  .toggle-wrapper>button:nth-child(2){
     border-bottom:${(props)=>props.selected==="add" ? "3px solid #19376D" : ""};
     color:${(props)=>props.selected==="add" ? "#576CBC" : "black"};

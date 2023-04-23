@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 
 const adsSchema=new mongoose.Schema({
-    companyId:Number,
+    companyId:String,
     primaryText:String,
     headline:String,
     description:String,

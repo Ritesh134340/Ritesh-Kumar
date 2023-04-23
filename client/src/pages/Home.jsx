@@ -1,9 +1,11 @@
 import React from "react";
-import Search from "./Search";
 import { HomeWrapper } from "../styles/home.styled";
 import {Link} from "react-router-dom"
 
+
+
 const Home = () => {
+ 
   return (
     <HomeWrapper>
         <h1 className="home-heading">Search Application</h1>

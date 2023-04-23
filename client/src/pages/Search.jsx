@@ -1,98 +1,66 @@
-import React,{useState,useEffect} from 'react'
-import styled from "styled-components"
-import {CiSearch} from "react-icons/ci"
-
+import React, { useState, useEffect } from "react";
+import { CiSearch } from "react-icons/ci";
+import { SearchWrapper } from "../styles/search.styled";
+import { Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { makeSearchRequest } from "../redux/appRedux/action";
+import Grid from "../components/Grid";
 
 const Search = () => {
-    
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialValue = searchParams.get("q") || "";
+  const dispatch = useDispatch();
+  const [searchTerm, setSearchTerm] = useState(initialValue);
+  const data=useSelector((state)=>state.appReducer.adsData)
+  const loading=useSelector((state)=>state.appReducer.loading)
 
-    const [searchTerm,setSearchTerm]=useState("")
-
-    const handleChange=(e)=>{
-      setSearchTerm(e.target.value)
+  const handleEnterSearch = (e) => {
+    if (e.key === "Enter") {
+      setSearchParams({ q: searchTerm });
+      dispatch(makeSearchRequest(searchTerm));
     }
+  };
 
-  
+  const handleClickSearch = (e) => {
+    setSearchParams({ q: searchTerm });
+    dispatch(makeSearchRequest(searchTerm));
+  };
 
-    const handleEnterSearch=(e)=>{
-      if(e.key==='Enter'){
-        alert("run funcftion")
-      }
+  useEffect(() => {
+    let id;
+    if (searchTerm !== "") {
+      clearTimeout(id);
+      id = setTimeout(() => {
+        setSearchParams({ q: searchTerm });
+        dispatch(makeSearchRequest(searchTerm));
+     
+      }, 500);
     }
-
-    const handleClickSearch=(e)=>{
-       alert("run function")
-    }
-
-    useEffect(()=>{
-      let id;
-      if(searchTerm!==""){
-       clearTimeout(id);
-       id=setTimeout(() => {
-        alert(searchTerm)
-       }, 3000);
-      }
-      return ()=>{
-        clearTimeout(id)
-      }
-    },[searchTerm])
-
+    return () => {
+      clearTimeout(id);
+    };
+  }, [searchTerm]);
 
 
   return (
     <SearchWrapper>
-        <h3 className="search-head">Enter search keyword</h3>
-        <div className="input-wrapper">
-        <input type="search" className="search-input" onChange={handleChange} onKeyDown={handleEnterSearch}/>
-        <CiSearch className="search-icon" onClick={handleClickSearch}/>
-        </div>
-        
+      <h3 className="search-head">Enter search keyword</h3>
+      <div className="input-wrapper">
+        <input
+          type="search"
+          className="search-input"
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyDown={handleEnterSearch}
+          placeholder="Enter your query"
+        />
+        <CiSearch className="search-icon" onClick={handleClickSearch} />
+      </div>
+      <div>
+        <Grid data={data}/>
+      </div>
     </SearchWrapper>
-  )
-}
+  );
+};
 
-const SearchWrapper=styled.div`
- margin:auto;
- margin-top:50px;
-
- .search-head{
-  text-align:center;
-  font-size:30px;
-  font-weight:400;
-
- }
-
- .input-wrapper{
-  display:flex;
-  width:38%;
-  margin:auto;
-  align-items:center;
-  border-radius:5px;
-  border:1px solid gray;
-  overflow:hidden;
-
- }
- .search-icon{
-  font-size:30px;
-  padding:0px 10px;
-  cursor:pointer;
- }
-
- .search-input{
-    height:45px;
-    width:100%;
-    outline:none;
-    border:none;
-    box-sizing:border-box;
-    font-size:18px;
-    padding-left:10px;
-    padding-right:8px;
- }
-
- 
-
- 
-`
-
-
-export default Search
+export default Search;

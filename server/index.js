@@ -4,7 +4,8 @@ const connection = require("./config/db");
 const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 8000;
-const searchRouter = require("./routes/search.route");
+const companyRouter = require("./routes/company.route");
+const addRouter=require("./routes/add.route")
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -13,7 +14,8 @@ app.get("/", (req, res) => {
   res.status(200).send({ mesg: "Welcome to SearchAds Server !" });
 });
 
-app.use("/search", searchRouter);
+app.use("/company", companyRouter);
+app.use("/add", addRouter);
 
 app.listen(PORT, async () => {
   try {
