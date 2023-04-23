@@ -27,10 +27,11 @@ Start frontent server : npm run
 
 ## Features :-
 
-*Features
-Create company data.
-Create new ads.
-Search ads.
+Create company data
+
+Create new ads
+
+Search ads
 
 
 
