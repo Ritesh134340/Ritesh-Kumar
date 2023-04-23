@@ -70,6 +70,13 @@ Search ads
 - Mongodb 
 - Mongoose
 
+**Home Page :**
+![Screenshot (785)](https://user-images.githubusercontent.com/105931703/233850983-183aed2b-b2ae-4d77-acc5-a3b644536b4b.png)
+
+
+**Add Data :**
+![Screenshot (786)](https://user-images.githubusercontent.com/105931703/233850989-b718064e-ebb5-4ffa-a11e-5eea891e7d5e.png)
+
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ritesh134340.github.io/)
