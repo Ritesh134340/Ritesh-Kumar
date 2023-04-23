@@ -1,4 +1,4 @@
- # Add Searching Application
+ # Ads  Application
 This is a web application built with ReactJS that allows users to create ads,company data and search ads.
 
 
