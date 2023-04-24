@@ -65,7 +65,7 @@ const Search = () => {
      {loading ? <h3 style={{marginTop:"30px",textAlign:"center"}}>Searching...</h3> : <div>
         <Grid data={data}/>
       </div>}
-     {data.length===0 && <div style={{margin:"auto",textAlign:"center",marginTop:"30px"}}>
+     {( !loading && data.length===0) && <div style={{margin:"auto",textAlign:"center",marginTop:"30px"}}>
            <p style={{color:"gray",fontSize:"18px"}}>Data <span style={{color:"red"}}>not found !</span></p>
       </div>}
       <Link style={{textDecoration:"none"}} to="/"> <p className="back-btn">Back</p></Link>
