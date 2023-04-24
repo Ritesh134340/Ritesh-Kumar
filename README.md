@@ -1,6 +1,14 @@
  # Ads  Application
 This is a web application built with ReactJS that allows users to create ads,company data and search ads.
 
+##Frontend Deployed Link :
+
+addsearch.netlify.app
+
+##Backend Deployed Link : 
+
+https://ads-41g1.onrender.com
+
 
 Getting Started
 
@@ -24,16 +32,6 @@ nodemon index.js
 Start frontent server :
 
 npm run 
-
-
-##Frontend Deployed Link :
-
-
-##Backend Deployed Link : 
-
-https://ads-41g1.onrender.com
-
-
 
 
 ## Features :-
