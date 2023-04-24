@@ -62,9 +62,9 @@ const Search = () => {
         />
         <CiSearch className="search-icon" onClick={handleClickSearch} />
       </div>
-      <div>
+     {loading ? <h3 style={{marginTop:"30px"}}>Searching...</h3> : <div>
         <Grid data={data}/>
-      </div>
+      </div>}
       <Link style={{textDecoration:"none"}} to="/"> <p className="back-btn">Back</p></Link>
     </SearchWrapper>
   );

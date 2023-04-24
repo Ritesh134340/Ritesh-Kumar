@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 
 const Grid = ({data}) => {
-
+console.log(data)
   return (
     <GridWrapper>
       <div className="grid-container">
