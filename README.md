@@ -78,6 +78,10 @@ Search ads
 ![Screenshot (786)](https://user-images.githubusercontent.com/105931703/233850989-b718064e-ebb5-4ffa-a11e-5eea891e7d5e.png)
 
 
+**Responsive:**
+![Screenshot (787)](https://user-images.githubusercontent.com/105931703/233896572-7afdffaf-2f19-405d-bb7f-f5589abc31ec.png)
+
+
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ritesh134340.github.io/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ritesh134340/)
