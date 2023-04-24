@@ -43,6 +43,12 @@ const Search = () => {
   }, [searchTerm]);
 
 
+  useEffect(()=>{
+   
+    dispatch(makeSearchRequest(searchTerm));
+  },[])
+
+
   return (
     <SearchWrapper>
       <h3 className="search-head">Enter search keyword</h3>
@@ -59,6 +65,7 @@ const Search = () => {
       <div>
         <Grid data={data}/>
       </div>
+      <Link style={{textDecoration:"none"}} to="/"> <p className="back-btn">Back</p></Link>
     </SearchWrapper>
   );
 };

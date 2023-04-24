@@ -6,7 +6,8 @@ const adsSchema=new mongoose.Schema({
     headline:String,
     description:String,
     CTA:String,
-    imageUrl:String
+    imageUrl:String,
+    name:String
 })
 
 

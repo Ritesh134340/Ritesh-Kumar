@@ -19,7 +19,17 @@ add.post("/company",async(req,res)=>{
 
 add.post("/ad",async(req,res)=>{
    try{
-      const newAd=new Ads(req.body);
+      
+      const payload={...req.body}
+      
+
+      const comp=await Company.findOne({_id:payload.companyId}) 
+
+      payload.name=comp.name;
+      payload.url=comp.url;
+  
+      const newAd=new Ads(payload);
+
       await newAd.save()
       res.status(200).send({mesg:"Ad created successfully !"})
    }

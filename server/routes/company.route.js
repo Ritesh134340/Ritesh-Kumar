@@ -7,11 +7,31 @@ const company = Router();
 company.get("/ad", async (req, res) => {
   try {
    
-const searchTerm = req.query.q ;
-const regexPattern = new RegExp(searchTerm, "i"); 
-   const result=await Ads.find({})
-    
-    res.status(200).send({ mesg: "ok", data: result });
+const searchTerm= req.query.q 
+
+if(searchTerm){
+const result = await Ads.aggregate([
+  {
+    $match: {
+      $or: [
+        { name: { $regex: searchTerm, $options: "i" } },
+        { primaryText: { $regex: searchTerm, $options: "i" } },
+        { headline: { $regex: searchTerm, $options: "i" } },
+        { description: { $regex: searchTerm, $options: "i" } }
+      ]
+    }
+  }
+
+]);
+
+res.status(200).send({ mesg: "ok", data: result });
+}
+else{
+  const result=await Ads.find({})
+  res.status(200).send({mesg:"ok",data:result})
+}
+
+
 
   } catch (err) {
     console.log("Error from get company ads route : ", err);

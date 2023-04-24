@@ -39,7 +39,42 @@ export const SearchWrapper=styled.div`
     padding-right:8px;
  }
 
+ .back-btn{
+    margin:auto;
+    border:2px solid red;
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:50px;
+    cursor:pointer;
+    border:1px solid gray;
+    font-weight:bold;
+    border-radius:5px;
+    background-color:red;
+    width:100px;
+    padding-top:5px;
+    padding-bottom:5px;
+    color:white;
+ }
+
  
+ @media all and (max-width:1024px) and (min-width:769px){
+ .input-wrapper{
+   width:60%;
+ }
+ 
+}
+
+
+@media all and (max-width:768px) and (min-width:481px){
+   .input-wrapper{
+   width:60%;
+ }
+}
+
+@media all and (max-width:480px) and (min-width:279px){
+   .input-wrapper{
+   width:90%;
+ }
 
  
 `
