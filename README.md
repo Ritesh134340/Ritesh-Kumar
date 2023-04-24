@@ -3,7 +3,7 @@ This is a web application built with ReactJS that allows users to create ads,com
 
 ##Frontend Deployed Link :
 
-addsearch.netlify.app
+https://addsearch.netlify.app
 
 ##Backend Deployed Link : 
 
@@ -17,7 +17,9 @@ Installation
 
 Clone the repository: 
 
-git clone https://github.com/Ritesh134340/Ritesh-Kumar.git
+git clone
+
+https://github.com/Ritesh134340/Ritesh-Kumar.git
 
 Install dependencies:
 
